@@ -1,16 +1,22 @@
 <div class="toolbar">
-    <input class="tool-btn" placeholder="Amount " type="number" [(ngModel)]="currencyFirstValue" (change)="onSelect()">
+  <input class="tool-btn" placeholder="Amount " type="number" [(ngModel)]="currencyFirstValue" (change)="onSelect()">
+  <div class="tollbar-container">
     <label for='select'>From</label>
-    <select class="tool-btn select-btn" type="text" name="select" [(ngModel)]="chosenFirstCurrency" (change)="onSelect()">      
+    <select class="tool-btn select-btn" type="text" name="select" [(ngModel)]="chosenFirstCurrency"
+      (change)="onSelect()">
       <option value="usd">USD</option>
       <option value="euro">EURO</option>
       <option value="uah">UAH</option>
     </select>
+  </div>
+  <div class="tollbar-container">
     <label for='select'>To</label>
-    <select class="tool-btn select-btn" type="text" name="select" [(ngModel)]="chosenSecondCurrency" (change)="onSelect()">      
+    <select class="tool-btn select-btn" type="text" name="select" [(ngModel)]="chosenSecondCurrency"
+      (change)="onSelect()">
       <option value="usd">USD</option>
       <option value="euro">EURO</option>
       <option value="uah">UAH</option>
     </select>
-    <input class="tool-btn" placeholder="Amount " type="text"  #textField2 disabled>    
+  </div>
+  <input class="tool-btn" placeholder="Amount " type="text" #textField2 disabled>
 </div>

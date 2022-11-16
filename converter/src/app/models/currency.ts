@@ -1,6 +1,8 @@
 export interface ICurrency {
-    "ccy": string,
-    "base_ccy": string,
-    "buy": string,
-    "sale": string
+    "currencyCodeA": number,
+    "currencyCodeB": number,
+    "date": number,
+    "rateSell": number,
+    "rateBuy": number,
+    "rateCross": number
 }

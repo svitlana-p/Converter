@@ -5,8 +5,11 @@
   </div>
   <ul class="currency-container">
     <li *ngFor="let item of convertService.currency" class="currency-item">
-      <div>{{item.ccy}}</div>
-      <div>{{item.sale | currency:' UAH ' }} </div>
+      <div *ngIf="item.currencyCodeA === 978">EURO</div>
+      <div *ngIf="item.currencyCodeA === 840">USD</div>
+      <div *ngIf="item.currencyCodeA === 985">PLN</div>
+      <div>{{item.rateSell | currency:' UAH ' }} </div>
+      <div *ngIf="item.rateCross">{{item.rateCross | currency:' UAH ' }} </div>
     </li>
   </ul>
 </div>
